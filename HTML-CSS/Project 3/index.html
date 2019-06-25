@@ -1,0 +1,314 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Product Lunding Page</title>
+    <style>
+      body{
+        background-color: #8dcccc;
+        font-family: Verdana;
+        margin: 0px;
+      }
+
+      #header{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #8dcccc;
+        width: 100%;
+      }
+
+      #nav-bar{
+        width: 50%;
+      }
+
+      ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        font-weight: bold;
+      }
+
+      #header-img{
+        width: 300px;
+        height: 75px;
+        margin-left: 20px;
+      }
+
+      .nav-link{
+        text-decoration: none;
+        color: black;
+      }
+
+      main{
+        padding-top: 75px;
+      }
+
+      .title{
+        text-align: center;
+      }
+
+      #features{
+        width: 850px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+
+      }
+
+      .info i{
+        font-size: 3em;
+        padding-top: 15px;
+        color: #d14343;
+      }
+
+      .info{
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        justify-content: space-between;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      .info div{
+        width: 85%;
+      }
+
+      .info div h2, .info div p{
+        margin: 0px;
+      }
+
+      #fea-video{
+        text-align: center;
+        margin-top: 75px;
+      }
+
+      #form{
+        margin-top: 40px;
+      }
+
+      #form div{
+        text-align: center;
+        margin: 20px;
+      }
+
+      #email{
+        padding: 10px;
+        /*padding-left:10px;*/
+        min-width: 20%;
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      #submit, .prod input{
+        min-width: 15%;
+        height: 30px;
+        border-radius: 5px;
+        border: 0px solid gray;
+        background-color: #73ff91;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      #submit:hover, .prod input:hover{
+        background-color: #fff873;
+      }
+
+      #products{
+        display: flex;
+        justify-content: center;
+      }
+
+      .prod{
+        border: 1px solid black;
+        width: 350px;
+        margin: 10px;
+        border-radius: 5px;
+        text-align: center;
+
+      }
+
+      .prod div{
+        background-color: #54accc;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-bottom: 25px;
+      }
+
+      .prod img{
+        width: 125px;
+        height: 150px;
+      }
+
+      .prod p{
+        margin: 5px;
+      }
+
+      .prod input{
+        width: 30%;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+
+      footer{
+        text-align: right;
+        background-color: #54accc;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-top: 30px;
+        font-weight: bold;
+      }
+
+      @media(max-width: 1000px){
+        #products{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      @media(max-width: 875px){
+        #features{
+          width: 100%;
+        }
+      }
+
+      @media(max-width: 650px){
+        ul{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+
+      @media(max-width: 580px){
+        #header{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        /*#header-img{
+          margin-left: 0px;
+        }*/
+
+        .info i{
+          font-size: 0em;
+        }
+
+        .info div{
+          width: 100%;
+          text-align: center;
+        }
+
+        #video{
+          width: 100%;
+        }
+      }
+
+      /*@media(max-width: 390px){
+        .prod{
+          width: 90%;
+        }
+      }*/
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <header id="header">
+      <img id="header-img" src="https://i.ibb.co/qNzHsyc/iphone.png" alt="Company logo">
+      <nav id="nav-bar">
+        <ul>
+          <li><a class="nav-link" href="#features">Features</a></li>
+          <li><a class="nav-link" href="#fea-video">Video</a></li>
+          <li><a class="nav-link" href="#products">Products</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2 class="title">iPhone XS, XS Max, XR</h2>
+      <section id="features">
+        <div class="info">
+          <i class="fas fa-check-circle"></i>
+          <div >
+            <h2>Quality</h2>
+            <p>Buying Apple products you can be sure that there will not be any disruptions in work - this is also true for the iPhone. iPhone is always quality and high level of performance.</p>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fas fa-cog"></i>
+          <div >
+            <h2>Support</h2>
+            <p>You will receive updates for at least three years. During all this time, you will have the most current version of the firmware and it does not happen that you hang on some old version.</p>
+          </div>
+        </div>
+        <div class="info">
+          <i class="fas fa-poll"></i>
+          <div >
+            <h2>Trend</h2>
+            <p>All technologies that Apple introduces into the iPhone, immediately become trendy, they are picked up by the rest of the developers.</p>
+          </div>
+        </div>
+        <div class="info">
+
+          <i class="fas fa-fire"></i>
+          <div >
+            <h2>Compatibility</h2>
+            <p>There are a huge number of gadgets, devices and other accessories for iPhones that are fully compatible with it. And the point is not only that the models themselves are not so many, they are just ready to make products for Apple's smartphones.</p>
+          </div>
+        </div>
+      </section>
+      <section id="fea-video">
+        <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/LW5xRmGKG2g" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <div><input type="email" id="email" required placeholder="Please enter your email" name="email"></div>
+        <div><input type="submit" id="submit" value="Get started"></div>
+      </form>
+      <section id="products">
+        <div class="prod">
+          <div><h3>iPhone XS</h3></div>
+          <img src="https://i.ibb.co/drrKMyS/iphoneXS.png" alt="iPhone XS" >
+          <h2>$999</h2>
+          <p>System on chip: iOS12.3.1</p>
+          <p>Memory: 4GB</p>
+          <p>Storage: 64GB</p>
+          <p>Rear camera: 12MP</p>
+          <p>Front camera: 7MP</p>
+          <input type="submit" value="Select">
+        </div>
+        <div class="prod">
+          <div><h3>iPhone XS Max</h3></div>
+          <img src="https://i.ibb.co/C2jq7km/iphone-XSmax.png" alt="iPhone XS">
+          <h2>$1099</h2>
+          <p>System on chip: iOS12.3.1</p>
+          <p>Memory: 4GB</p>
+          <p>Storage: 64GB</p>
+          <p>Rear camera: 12MP</p>
+          <p>Front camera: 7MP</p>
+          <input type="submit" value="Select">
+        </div>
+        <div class="prod">
+          <div><h3>iPhone XR</h3></div>
+          <img src="https://i.ibb.co/Mph8Ndz/iphoneXR.png" alt="iPhone XS">
+          <h2>$749</h2>
+          <p>System on chip: iOS12.3.1</p>
+          <p>Memory: 3GB</p>
+          <p>Storage: 64GB</p>
+          <p>Rear camera: 12MP</p>
+          <p>Front camera: 7MP</p>
+          <input type="submit" value="Select">
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2019 iPhone</p>
+    </footer>
+  </body>
+</html>
+
+
