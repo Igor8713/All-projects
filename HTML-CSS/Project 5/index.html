@@ -1,0 +1,317 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My first portfolio</title>
+    <style>
+      /*html, body{
+        height: 100%;
+      }*/
+
+      body{
+        margin: 0px;
+        padding: 0px;
+        font-family: "Rubik", Verdana;
+        font-size: 14px;
+      }
+
+      a{
+        text-decoration: none;
+        color: white;
+      }
+
+      p, i, h1, h2, b, a, ul{
+        margin: 0px;
+        padding: 0px;
+      }
+
+      header{
+        position: fixed;
+        background-color: #404040;
+        width: 100%;
+        height: 75px;
+        top: 0;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      /*#navbar{
+        height: 100%;
+      }*/
+
+      #navbar ul{
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+        padding: 0px;
+      }
+
+      #navbar ul li a{
+        display: flex;
+        font-size: 25px;
+        padding-right: 20px;
+        padding-left: 20px;
+        height: 100%;
+        align-items: center;
+      }
+
+      #navbar ul li a:hover{
+        background-color: #3bb7c4;
+      }
+
+      #welcome-section, #contact{
+        display: flex;
+        background: linear-gradient(90deg, #335280, #3d6094, #335280);
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #welcome-section h1, #contact h1{
+        color: white;
+        font-size: 75px;
+        margin: 0px;
+      }
+
+      #welcome-section i{
+        font-size: 40px;
+        margin: 0px;
+        color: #3bb7c4;
+      }
+
+      #projects{
+        background-color: #00858a;
+        text-align: center;
+      }
+
+      #projects h2{
+
+        margin-bottom: 40px;
+        color: white;
+        padding-top: 70px;
+        font-size: 50px;
+        text-decoration: underline;
+      }
+
+      #projects div{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 95%;
+        margin: auto;
+        grid-gap: 30px;
+      }
+
+      .project-tile{
+        text-decoration: none;
+      }
+
+      .project-tile img{
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.4);
+      }
+
+      .project-tile p{
+        height: 100%;
+        background-color: #404040;
+        color: white;
+        font-size: 20px;
+        padding: 20px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.4);
+      }
+
+      .project-tile p span{
+        padding-right: 5px;
+        padding-left: 5px;
+        color: #404040;
+        transition-property: color;
+        transition-duration: 500ms;
+      }
+
+      .project-tile:hover p span{
+        color: #3bb7c4;
+      }
+
+      .show{
+        text-decoration: none;
+        display: inline-block;
+        color: white;
+        background-color: #404040;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        width: 200px;
+        padding: 15px;
+        font-size: 20px;
+        border-radius: 5px;
+        transition-property: background-color;
+        transition-duration: 500ms;
+      }
+
+      .show:hover{
+        background-color: #3d6094;
+      }
+
+      .show b{
+        padding-left: 10px;
+        color: #404040;
+        transition-property: color;
+        transition-duration: 500ms;
+      }
+
+      .show:hover b{
+        color: white;
+      }
+
+      #contact{
+        height: 80%;
+      }
+
+      #contact div{
+        display: flex;
+        flex-direction: row;
+      }
+
+      #contact a{
+        font-size: 25px;
+        margin-top: 30px;
+        padding: 10px 20px;
+        transform: translateY(0px);
+        transition-property: transform;
+        transition-duration: 500ms;
+        text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+      }
+
+      #contact a:hover{
+        transform: translateY(10px);
+      }
+
+      #contact a i{
+        padding-right: 5px;
+      }
+
+      footer{
+        height: 10%;
+        background: linear-gradient(90deg, #335280, #3d6094, #335280);
+        border-top: 4px solid #404040;
+        color: white;
+        font-size: 20px;
+        padding-right: 100px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      @media(max-width: 700px){
+        #navbar ul{
+          justify-content: center;
+        }
+
+        #navbar ul li a{
+          font-size: 20px;
+          padding-right: 10px;
+          padding-left: 10px;
+        }
+      }
+
+      @media(max-width: 950px){
+        #welcome-section h1, #contact h1{
+          font-size: 50px;
+        }
+
+        #projects div{
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media(max-width: 600px){
+        #welcome-section h1, #contact h1{
+          font-size: 35px;
+        }
+
+        #welcome-section i{
+          font-size: 30px;
+        }
+
+        #projects h2{
+          font-size: 35px;
+        }
+
+        footer{
+          justify-content: center;
+          padding-right: 0px;
+        }
+      }
+
+      /*@media(max-width: 440px){
+        #navbar ul li a{
+          font-size: 15px;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+
+        #welcome-section h1, #contact h1{
+          font-size: 25px;
+        }
+
+        #welcome-section i{
+          font-size: 20px;
+        }
+      }*/
+    </style>
+  </head>
+  <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet" type="text/css">
+    <header>
+      <nav id="navbar">
+        <ul>
+          <li><a href="#welcome-section">For me</a></li>
+          <li><a href="#projects">My projects</a></li>
+          <li><a href="#contact">Contact information</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="welcome-section">
+      <h1>Hi, I am Igor Litvinenko</h1>
+      <i>a future web developer</i>
+    </section>
+    <section id="projects">
+      <h2>It is a my projects</h2>
+      <div>
+          <a class="project-tile" href="https://codepen.io/Igor968713/full/PvMEvP" target="_blank">
+            <img src="https://jpegshare.net/images/50/e6/50e6c2869411ef26b170b26db83e40d0.png" alt="William Shakespeare">
+            <p><span><</span>William Shakespeare<span>/></span></p>
+          </a>
+          <a class="project-tile" href="https://codepen.io/Igor968713/full/ZdEbJP" target="_blank">
+            <img src="https://jpegshare.net/images/19/ee/19ee9ffb37535d898b008f862f9e66e4.png" alt="Survey form">
+            <p><span><</span>Survey form<span>/></span></p>
+          </a>
+          <a class="project-tile" href="https://codepen.io/Igor968713/full/XLdLqR" target="_blank">
+            <img src="https://jpegshare.net/images/93/74/9374bb29aa4f5ee1f5f01861c17a98e1.png" alt="Magazine">
+            <p><span><</span>Magazine<span>/></span></p>
+          </a>
+          <a class="project-tile" href="https://codepen.io/Igor968713/full/bPgjxM" target="_blank">
+            <img src="https://jpegshare.net/images/f2/47/f24707c1e265f8f8cd2587dd9f6ef70e.png" alt="C# Documentation">
+            <p><span><</span>C# Documentation<span>/></span></p>
+          </a>
+      </div>
+      <a href="https://codepen.io/Igor968713/" target="_blank" class="show">Show in CodePen<b>>></b></a>
+    </section>
+    <section id="contact">
+      <h1>Contact information</h1>
+      <div>
+        <a href="mailto:igor.litvinenko.1996@gmail.com" target="_blank"><i class="fas fa-at"></i>Email</a>
+        <a href="https://github.com/Igor8713" target="_blank" id="profile-link"><i class="fab fa-github"></i>GitHub</a>
+      </div>
+    </section>
+    <footer>
+      <p>&copy; 2019 My first Portfolio</p>
+    </footer>
+  </body>
+</html>
