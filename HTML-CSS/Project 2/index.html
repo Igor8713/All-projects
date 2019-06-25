@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <title>Survey Form</title>
+    <meta charset="utf-8">
+    <style>
+      body{
+        background-color: hsl(120, 70%, 80%);
+        font-family: Verdana;
+      }
+
+      main{
+        background-color: #f0f0f0;
+        width: 75%;
+        margin: auto;
+        border-radius: 15px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.19), 0 6px 16px rgba(0,0,0,0.23);
+      }
+
+      #title, #description{
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      .desc{
+        width: 90%;
+        margin: auto;
+      }
+
+      .lab-in{
+        margin-top: 25px;
+      }
+
+      .labels{
+        width: 40%;
+        text-align: right;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .inputs{
+        width: 55%;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      #name, #email, #number{
+        width: 50%;
+        height: 30px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      #dropdown{
+        min-width: 25%;
+        height: 30px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      #add-inf{
+        width: 50%;
+        height: 80px;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid gray;
+      }
+
+      .button{
+        text-align: center;
+        margin-top: 25px;
+      }
+
+      #submit{
+        min-width: 15%;
+        height: 50px;
+        background-color: #3bd4b5;
+        font-size: 20px;
+        color: white;
+        border-radius: 5px;
+        border: 0px solid white;
+      }
+
+      #submit:hover{
+        background-color: #d66565;
+      }
+
+      @media(max-width: 600px){
+        .labels{
+          text-align: left;
+          width: 95%;
+          padding-left: 10px;
+          margin-bottom: 5px;
+        }
+
+        .inputs{
+          width: 95%;
+          padding-left: 10px;
+          margin-bottom: 5px;
+        }
+
+        #name, #email, #number{
+          width: 80%;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1 id="title">My favorite survey form</h1>
+    <main>
+      <div class="desc"><p id="description">This survey form for the preferred programming languages</p></div>
+      <form id="survey-form">
+        <div class="lab-in">
+          <div class="labels"><label id="name-label" for="name">* Name:</label></div>
+          <div class="inputs"><input type="text" id="name" required placeholder="Enter your name"></div>
+        </div>
+        <div class="lab-in">
+          <div class="labels"><label id="email-label" for="email">* Email:</label></div>
+          <div class="inputs"><input type="email" id="email" required placeholder="Enter your email"></div>
+        </div>
+        <div class="lab-in">
+          <div class="labels"><label id="number-label" for="number">* Age:</label></div>
+          <div class="inputs"><input type="number" id="number" required min="1" max="100" placeholder="Enter your age"></div>
+        </div>
+        <div class="lab-in">
+          <div class="labels"><label for="dropdown">Please, indicate your level in the profession of programmer:</label></div>
+          <div class="inputs"><select  id="dropdown">
+            <option disabled selected>Select your level</option>
+            <option>Student</option>
+            <option>Junior</option>
+            <option>Middle</option>
+            <option>Senior</option>
+            <option>Other</option>
+          </select></div>
+        </div>
+        <div class="lab-in">
+          <div class="labels"><label>How often do you program?</label></div>
+          <div class="inputs">
+            <input type="radio" name="programming" id="never" value="never">
+            <label for="never">Never</label><br>
+            <input type="radio" name="programming" id="rarely" value="rarely">
+            <label for="rarely">Rarely</label><br>
+            <input type="radio" name="programming" id="sometimes" value="sometimes">
+            <label for="sometimes">Sometimes</label><br>
+            <input type="radio" name="programming" id="frequently" value="frequently">
+            <label for="frequently">Frequently</label><br>
+            <input type="radio" name="programming" id="very-freq" value="very-freq">
+            <label for="very-freq">Very frequently</label><br>
+          </div>
+        </div>
+        <div class="lab-in">
+          <div class="labels"><label>What applications you are developing?</label></div>
+          <div class="inputs">
+            <input type="radio" name="developing" id="mobile" value="mobile">
+            <label for="mobile">Mobile developer</label><br>
+            <input type="radio" name="developing" id="web" value="web">
+            <label for="web">Web-developer</label><br>
+            <input type="radio" name="developing" id="desktop" value="desktop">
+            <label for="desktop">Desktop developer</label><br>
+            <input type="radio" name="developing" id="game" value="game">
+            <label for="game">Game developer</label><br>
+            <input type="radio" name="developing" id="other" value="other">
+            <label for="other">Other</label><br>
+          </div>
+        </div>
+        <div class="lab-in">
+          <div class="labels"><label>Which programming languages do you prefer?</label></div>
+          <div class="inputs">
+            <input type="checkbox" name="lang" id="csh" value="csh">
+            <label for="csh">C#</label><br>
+            <input type="checkbox" name="lang" id="cp" value="cp">
+            <label for="cp">C++</label><br>
+            <input type="checkbox" name="lang" id="html-css" value="html-css">
+            <label for="html-css">HTML/CSS</label><br>
+            <input type="checkbox" name="lang" id="js" value="js">
+            <label for="js">JavaScript</label><br>
+            <input type="checkbox" name="lang" id="java" value="java">
+            <label for="java">Java</label><br>
+            <input type="checkbox" name="lang" id="python" value="python">
+            <label for="python">Python</label><br>
+            <input type="checkbox" name="lang" id="php" value="php">
+            <label for="php">PHP</label><br>
+            <input type="checkbox" name="lang" id="swift" value="swift">
+            <label for="swift">Swift</label><br>
+          </div>
+        </div>
+        <div class="lab-in">
+          <div class="labels"><label for="add-inf">Additional information about you:</label></div>
+          <div class="inputs"><textarea placeholder="Enter additional information..."  id="add-inf"></textarea></div>
+        </div>
+        <div class="button"><input type="submit" id="submit" value="Submit"></div>
+      </form>
+    </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
